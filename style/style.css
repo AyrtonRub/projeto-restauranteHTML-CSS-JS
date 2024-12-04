@@ -8,6 +8,7 @@
 :root {
     --colorPrimary: #1d1d1db3;
     --colorSecond: #FFF9EA;
+    --colorTerc: #FFCB45;
 }
 
 /* Navegação */
@@ -24,19 +25,22 @@ li {
 
 header {
     background-color: var(--colorSecond);
-    box-shadow: 0 0 10px 3px rgba(0,0,0, .3);
+    /* box-shadow: 0 0 10px 3px rgba(0,0,0, .3); */
+    padding: .5rem 0;
 }
 
-.container   {
-    max-width: 1400px;
+.container,
+footer   {
+    max-width: 1200px;
     margin: auto;
+
 }
 
 .navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    padding: 0 1rem 0 1rem;
 }
 
 .logo {
@@ -52,7 +56,6 @@ header {
 .navigation ul {
     display: flex;
     gap: 2rem;
-    padding: 1rem;
 }
 
 .btn {
@@ -60,7 +63,7 @@ header {
     gap: 1rem;
     padding: 0.75rem 1.5rem;
     border: none;
-    background-color: #FFCB45;
+    background-color: var(--colorTerc);
     border-radius: 50px ;
     font-weight: bold;
     transition: scale .3s;
@@ -71,3 +74,298 @@ header {
     cursor: pointer;
     scale: 1.1;
 }
+
+/* Estilo do banner */
+
+.banner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: var(--colorSecond);
+    padding: 0 0rem 0 4rem;
+    height: 37.5625rem;
+    margin-bottom: 5rem;
+    box-shadow: 0 6px 6px  rgba(0,0,0, .1)
+}
+
+.banner-text {
+    grid-column: span 6;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.banner-text h1 {
+    font-size: 3rem;
+}
+
+.banner-text span {
+    color: var(--colorTerc);
+}
+
+.banner-img img {
+    width: 70%;
+}
+
+.banner-img {
+    grid-column: span 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* estilo serviços */
+
+.services {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sectionIntroduction {
+    color: var(--colorTerc);
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cardsServices {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: .5rem;
+    margin-top: 2rem;
+    
+}
+
+.cardsServices img {
+    width: 30%;
+}
+
+.cardsServices article {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Estilo do menu */
+
+.menu {
+    text-align: center;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.cardsMenu {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    margin: 3rem 0 3rem 0;
+}
+
+.cardsMenu article {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 0.625rem;
+    background: #f1f1f1a9;
+    
+    position: relative;
+    z-index: 999;
+}
+
+.cardsMenu article h4 {
+    margin-top: 1rem;
+}
+
+.cardsMenu article img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.price {
+    margin-top: 1rem;
+    display:  flex;
+    justify-content: space-between;
+}
+
+.menuPrice {
+    font-weight: bold;
+}
+
+.imgDestaque {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    right: 0;
+}
+
+.fa-heart {
+    transition: scale .2s;
+}
+
+.fa-heart:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+/*  */
+
+.assessment {
+    display: flex;
+    padding: 0 1rem;
+    margin-bottom: 5rem;
+}
+
+.assessmentImgs {
+    max-width: 50%;
+    padding: 1rem;
+}
+
+.assessmentContCards {
+    max-width: 50%;
+    padding: 1rem;
+}
+
+.cardsAssessment {
+    display: flex;
+    gap: 1rem;
+}
+
+.cardsAssessment article {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 0.625rem;
+    background: #F1F1F1;
+    padding: 1.5rem 1rem;
+}
+
+.cardsAssessment article p {
+    line-height: 1.5rem;
+}
+
+.cardsAssessmentPerson {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.namePerson p {
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+
+.assessmentImgs {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.assessmentImgs > *:nth-child(1) {
+    grid-column:  2 / 13;
+}
+.assessmentImgs > *:nth-child(2) {
+    grid-column: 2 / 6;
+}
+.assessmentImgs > *:nth-child(3) {
+    grid-column: 7 / 13;
+}
+
+/*  */
+
+.joinOur {
+    height: 20.75rem;
+    background: url(../image/imgJoin.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+}
+
+.joinOur p {
+    color: white;
+    font-size: 2rem;
+    width: 500px;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--colorSecond);
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(29, 29, 29, 0.50);
+    ;
+}
+
+.footer + p {
+    padding: 2rem ;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer h4 {
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+footer p {
+    font-size: 1.25rem;
+    color: var(--colorPrimary);
+}
+
+.socialMedia {
+    grid-column: 1 / 5;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.medias {
+    display: flex;
+    gap: 1rem;
+}
+
+.medias i {
+    font-size: 1.5rem;
+    color:var(--colorTerc);
+}
+
+.empresa {
+    grid-column: 5 / 7;
+}
+
+.politica {
+    grid-column: 8 / 10;
+}
+
+.contato {
+    grid-column: 10 / 13;
+}
+
+
