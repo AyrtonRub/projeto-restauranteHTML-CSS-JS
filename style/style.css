@@ -1,3 +1,6 @@
+
+
+
 * {
     padding: 0;
     margin: 0;
@@ -16,7 +19,7 @@
 a {
     text-decoration: none;
     color: var(--colorPrimary);
-    padding: 1rem;
+  
 }
 
 li {
@@ -27,6 +30,19 @@ header {
     background-color: var(--colorSecond);
     /* box-shadow: 0 0 10px 3px rgba(0,0,0, .3); */
     padding: .5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.active {
+    border-bottom: 3px solid #FFCB45;
+    font-weight: bold;
+}
+
+
+.shadow {
+    box-shadow: 0 0 10px 3px rgba(0,0,0, .3)
 }
 
 .container,
@@ -368,4 +384,6 @@ footer p {
     grid-column: 10 / 13;
 }
 
-
+.visible {
+    background-color: var(--colorPrimary);
+}
