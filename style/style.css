@@ -252,11 +252,14 @@ footer   {
 .assessmentContCards {
     max-width: 50%;
     padding: 1rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .cardsAssessment {
     display: flex;
     gap: 1rem;
+    overflow: hidden;
 }
 
 .cardsAssessment article {
@@ -266,6 +269,8 @@ footer   {
     border-radius: 0.625rem;
     background: #F1F1F1;
     padding: 1.5rem 1rem;
+    position: absolute;
+    /* transform: translateX(100%); */
 }
 
 .cardsAssessment article p {
@@ -384,6 +389,26 @@ footer p {
     grid-column: 10 / 13;
 }
 
-.visible {
-    background-color: var(--colorPrimary);
+.box {
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: transform ease-out .6s, opacity .4s ease-out;
 }
+
+.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.cardHidden {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+
+.cardsAssessment .cardVisible {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+
